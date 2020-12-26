@@ -83,7 +83,7 @@ a {
   bottom: 0;
   right: 0;
   left: 0;
-  background-image: linear-gradient(to top, black 0%, transparent 100%);
+  background-image: linear-gradient(to top, black 0%, black 40%,transparent 100%);
 }
 
 .Tags {
@@ -117,7 +117,50 @@ a {
 }
 
 .Button {
+  display: flex;
+  background: white;
+  align-items: center;
+  padding: 5px 1em 5px 0.5em;
+  border-radius: 3px;
+  border: none;
+  font-weight: 500;
+}
+
+.Button::before {
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  margin-right: 5px;
 }
 
 .Button__secondary {
+  background: none;
+  color: white;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+  min-width: 100px;
+}
+
+.Button__secondary::before {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: auto auto 5px auto;
+}
+
+.is--iconPlus::before {
+  background: url(../../images/icons/plus.svg);
+}
+
+.is--iconPlay::before {
+  background: url(../../images/icons/play.svg);
+}
+
+.is--iconInfo::before {
+  background: url(../../images/icons/info.svg);
 }
