@@ -228,3 +228,18 @@ a {
   display: flex;
   flex-direction: column;
 }
+
+.Menu__link:hover {
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .Header {
+    padding-bottom: 36px;
+  }
+
+  .Featured__video {
+    width: 100%;
+    height: 350px;
+  }
+}
